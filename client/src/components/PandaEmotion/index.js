@@ -71,24 +71,26 @@ const PandaEmotion = () => {
         
     return (
     <div className='columns'>
-        <div className="column is-two-thirds">
-        <section className="hero is-info welcome is-small">
-            <div className="hero-body">
+        <div className="column is-two-thirds" style = {{borderRadius:"10px"}}>
+        <section className="hero is-info welcome is-small" style = {{backgroundColor:"rgba(255, 255, 255, 0)"}}>
+            <div className="panda hero-body mt-5" style={{borderRadius:"10px"}}>
                 <div className="container">
                     <div className='columns'>
                     <h1 className="title column mb-0">
                         Panda is {emotion}!
                         {/* This will tell user what emotion panda has */}
                     </h1>
-                    <PlaySound className = "column" src= {require(`../../pages/audio/${emotion}.mp3`)}/>
+                    <PlaySound className = "column" src= {require(`../../pages/audio/${emotion}.mp3`)} />
                     </div>
-                    <h2 className="subtitle">
+                    <h2 className="subtitle" style={{width:"650px"}}>
                         {hint}
                         {/* This will give a hint as to how to help the panda */}
                     </h2>
                     
-                    <div>
+                    <div style={{display:"flex", justifyContent:"center"}}>
                         <img
+                            height="400px"
+                            width="400px"
                             src={require(`../../pages/pandas/${emotion}.PNG`)}
                             alt="sad panda">
                         </img>
@@ -98,17 +100,17 @@ const PandaEmotion = () => {
         </section>
     </div>
     
-    <div className="column is-one-third mt-2">
+    <div className="column is-one-third mt-5">
         <aside className="menu is-mobile">
                     <p className="menu-label">
                         Choose what will help Panda!
                     </p>
                     <ul className="menu-list">
-                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "angry" >Go on a walk</button><PlaySound className = "column" src= {require(`../../pages/audio/walk.mp3`)}/></li>
-                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "lonely">Listen to Music</button><PlaySound className = "column" src= {require(`../../pages/audio/music.mp3`)}/></li>
-                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "worried">Journal your feelings</button><PlaySound className = "column" src= {require(`../../pages/audio/write.mp3`)}/></li>
-                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "disappointed">Take Deep Breaths</button><PlaySound className = "column" src= {require(`../../pages/audio/breathe.mp3`)}/></li>
-                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "jealous">Count Five Things I'm Grateful For</button><PlaySound className = "column" src= {require(`../../pages/audio/gratitude.mp3`)}/></li>
+                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "angry" style = {{backgroundColor:"#a601f8"}}>Go on a walk</button><PlaySound className = "column" src= {require(`../../pages/audio/walk.mp3`)}/></li>
+                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "lonely" style = {{backgroundColor:"#006eff"}}>Listen to Music</button><PlaySound className = "column" src= {require(`../../pages/audio/music.mp3`)}/></li>
+                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "worried" style= {{backgroundColor:"#00ff62"}}>Journal my feelings</button><PlaySound className = "column" src= {require(`../../pages/audio/write.mp3`)}/></li>
+                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "disappointed" style= {{backgroundColor:"#ffc30f"}}>Take Deep Breaths</button><PlaySound className = "column" src= {require(`../../pages/audio/breathe.mp3`)}/></li>
+                        <li className='columns'><button onClick={handleAnswer} className = "column m-2" id = "jealous" style= {{backgroundColor:"#ff730f"}}>Count Five Things I'm Grateful For</button><PlaySound className = "column" src= {require(`../../pages/audio/gratitude.mp3`)}/></li>
                     </ul>
                 </aside>
     </div>

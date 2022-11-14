@@ -66,20 +66,22 @@ const Home = () => {
             {Auth.loggedIn() ? (
                 <PandaEmotion/>
             ):(
-                <div className="column is-half">
-        <section className="hero is-info welcome is-small">
-            <div className="hero-body">
+                <div className="column is-half" style = {{borderRadius:"10px"}}>
+        <section className="hero is-info welcome is-small" style = {{backgroundColor:"rgba(255, 255, 255, 0)"}}>
+            <div className="panda hero-body mt-4" style={{borderRadius:"10px"}}>
                 <div className="container">
-                    <h1 className="title">
+                    <div className='columns'>
+                    <h1 className="title column mb-0">
                         Welcome Back.
                         {/* This will tell user what emotion panda has */}
                     </h1>
-
+                    <PlaySound className="column" src="Welcome-back.mp3" />
+                    </div>
                     <h2 className="subtitle">
                         Your panda missed you!
                         {/* This will give a hint as to how to help the panda */}
                     </h2>
-                    <PlaySound src="Welcome-back.mp3" />
+                    
                     <div>
                         <img
                             src={require(`./pandas/happy.PNG`)}
