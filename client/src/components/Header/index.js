@@ -10,29 +10,36 @@ const Header = () => {
   };
   return (
     <header className="hero-head">
-      <div className="navbar">
+      <div className="navbar" style={{backgroundColor:"#fff12f"}}>
         <Link to="/" className="navbar-item" style={{ fontSize: '2rem' }}>
-          Happy Panda
+          <img src= {require('../../pages/pandas/happy.PNG')} style={{marginRight:"10px"}}/>
+          <h1 className='logo'> HAPPY PANDA </h1>
         </Link>
-        <div className="navbar-item navbar-end is-white">
+        <div className="navbar-item navbar-end">
           {Auth.loggedIn() ? (
             <>
-              <Link className="navbar-item navbar-end is-light is-mobile" to="/note">
-                <button className="button navbar-item navbar-end is-white">
+              
+                <button className="button navbar-item navbar-end is-light is-mobile" style={{backgroundColor:"#76f904", border:"none", justifyContent:"center", margin:"3px", width:"100px"}}>
+                <Link  style={{color:"white"}} to="/note">
                   Notes
+                  </Link>
                 </button>
-              </Link>
-              <button className="button navbar-item navbar-end is-white" onClick={logout}>
+              
+              <button  style={{backgroundColor:"#f90404", border:"none", justifyContent:"center", margin:"3px", width:"100px"}} className="button navbar-item navbar-end is-mobile" onClick={logout}>
                 Logout
               </button>
             </>
           ) : (
             <>
               <Link className="navbar-item navbar-end is-light is-mobile" to="/login">
-                Login
+              <button  style={{backgroundColor:"#f90404", border:"none"}} className="button navbar-item navbar-end">
+                  login
+                </button>
               </Link>
               <Link className="navbar-item navbar-end is-light" to="/signup">
-                Signup
+              <button  style={{backgroundColor:"#76f904", border:"none", justifyContent:"center"}} className="button navbar-item navbar-end is-mobile" onClick={logout}>
+                signup
+              </button>
               </Link>
             </>
           )}
