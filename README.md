@@ -72,7 +72,9 @@ npm run develop
 
 ### Screenshots
 
+![Screen Shot 2022-11-14 at 10 07 29 AM](https://user-images.githubusercontent.com/108099192/201808929-4077c205-ddc1-4379-862b-55228534037e.JPEG)
 
+![Screen Shot 2022-11-14 at 6 01 53 PM](https://user-images.githubusercontent.com/108099192/201808937-05c30cee-d0a0-4da7-ad8d-90e7b9a51355.JPEG)
 
 ## Collaborators
 
@@ -109,7 +111,7 @@ This project is licensed under the terms of the MIT license.
 
 ## Deploy Application
 
-<https://happy-panda.vercel.app/>
+<https://safe-peak-97961.herokuapp.com/>
 
 
 ## Tests
